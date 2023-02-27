@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container signup light">
+            <h1>Signup</h1>
+            <form>
+                <div class="user_box">
+                    <input type="text" required>
+                    <label for="">Firstname</label>
+                </div>
+                <div class="user_box">
+                    <input type="text" required>
+                    <label for="">Lastname</label>
+                </div>
+                <div class="user_box">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="user_box">
+                    <input type="password" id="pass_2" oninput="hiddenscript2()" class="_form_control" required>
+                    <label for="">PIN</label>
+                    <div class="Eyeicon">
+                        <div class="eyeicon">
+                            <ion-icon name="eye-outline" class="f_awesome eyeOpen" id="eye_2" onclick="Showfunction2()"></ion-icon>
+                        </div>
+                        <ion-icon name="eye-off-outline" class="f_awesome" id="eye2_2" onclick="Showfunction2()"></ion-icon>
+                    </div>
+                </div>
+                <button class="startedbtn">Get Started</button>
+            </form>
+            <p>
+                <a href="#" class="login-button">Login?</a>
+            </p>
+        </div>
+
+        <div class="container login dark">
+            <h1>Log In</h1>
+            <form>
+                <div class="user_box">
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="user_box">
+                    <input type="password" id="pass" oninput="hiddenscript()" class="_form_control" required>
+                    <label for="">PIN</label>
+                    <div class="Eyeicon">
+                        <div class="eyeicon">
+                            <ion-icon name="eye-outline" class="f_awesome eyeOpen" id="eye" onclick="Showfunction()"></ion-icon>
+                        </div>
+                        <ion-icon name="eye-off-outline" class="f_awesome" id="eye2" onclick="Showfunction()"></ion-icon>
+                    </div>
+                </div>
+                <button class="explorebtn">Explore</button>
+            </form>
+            <p>
+                <a href="#" class="signup-button">Create account?</a>
+            </p>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html> 

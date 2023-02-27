@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background: #fff;
+}
+
+.wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6), inset 0 15px 25px rgba(0,0,0,.3);
+    height: 620px;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: .4s;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    height: 620px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.container.dark {
+    background: #141e30;
+}
+
+.container.light {
+    background: #03e9f4;
+}
+
+.container.login {
+    transform: translate(0%, -100%);
+}
+
+.container.signup {
+    transform: translate(0%, -100%);
+}
+
+.container h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1;
+    margin: 30px 0 40px;
+}
+
+.container.light {
+    color: #141e30;
+}
+
+.container.dark {
+    color: #fff;
+}
+
+.user_box {
+    position: relative;
+}
+
+.user_box input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.container.light .user_box input {
+    border: 1px solid #141e30;
+    color: #141e30;
+}
+
+.container.dark .user_box input {
+    border: 1px solid #03e9f4;
+    color: #03e9f4;
+}
+
+.user_box label {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    pointer-events: none;
+    transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+    margin-left: 10px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+.container.light .user_box label {
+    color: #141e30;
+}
+
+.container.dark .user_box label {
+    color: #03e9f4;
+}
+
+.user_box input:active,
+.user_box input:focus,
+.user_box input:valid {
+    border: 1px solid #141e30;
+    outline: none;
+}
+
+.container.light .user_box input:active ~ label,
+.container.light .user_box input:focus ~ label,
+.container.light .user_box input:valid ~ label {
+    margin-top: -8px;
+    color: #141e30;
+    font-size: 14px;
+    background: #03e9f4;
+    z-index: 99;
+    border-left: 1px solid #141e30;
+    border-right: 1px solid #141e30;
+}
+
+.container.dark .user_box input:active ~ label,
+.container.dark .user_box input:focus ~ label,
+.container.dark .user_box input:valid ~ label {
+    margin-top: -8px;
+    color: #03e9f4;
+    font-size: 14px;
+    background: #141e30;
+    z-index: 99;
+    border-left: 1px solid #03e9f4;
+    border-right: 1px solid #03e9f4;
+}
+
+.explorebtn {
+    position: relative;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: #03e9f4;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    cursor: pointer;
+    transition: .5s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin: 0px auto 0;
+}
+
+.explorebtn::before {
+    content: 'Explore';
+    position: absolute;
+    inset: 5px;
+    border: 3px solid #141e30;
+    border-radius: 50px;
+    color: #03e9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141e30;
+    transform: translateZ(1em);
+    letter-spacing: 2px;
+}
+
+.explorebtn::after {
+    content: 'Explore';
+    position: absolute;
+    inset: 5px;
+    border: 3px solid #141e30;
+    border-radius: 50px;
+    color: #03e9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #141e30;
+    transform: translateZ(-1em) rotateX(180deg);
+    transition: 1s;
+    letter-spacing: 2px;
+}
+
+.startedbtn {
+    position: relative;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: #141e30;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    cursor: pointer;
+    transition: .5s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin: 0px auto 0;
+}
+
+.startedbtn::before {
+    content: 'Get Started';
+    position: absolute;
+    inset: 5px 7px;
+    border: 3px solid #03e9f4;
+    border-radius: 50px;
+    color: #141e30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #03e9f4;
+    transform: translateZ(1em);
+    letter-spacing: 2px;
+}
+
+.startedbtn::after {
+    content: 'Get Started';
+    position: absolute;
+    inset: 5px;
+    border: 3px solid #03e9f4;
+    border-radius: 50px;
+    color: #141e30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #03e9f4;
+    transform: translateZ(-1em) rotateX(180deg);
+    transition: 1s;
+    letter-spacing: 2px;
+}
+
+.container.light .startedbtn:hover {
+    transform: rotateX(180deg);
+    perspective: 1000px;
+    box-shadow: 0 0 10px #141e30, 0 0 30px #141e30;
+}
+
+.container.dark .explorebtn:hover {
+    transform: rotateX(180deg);
+    perspective: 1000px;
+    box-shadow: 0 0 10px #03e9f4, 0 0 30px #03e9f4;
+}
+
+.explorebtn:hover::after {
+    color: white;
+}
+
+.startedbtn:active, .explorebtn:active {
+    transform: rotateX(180deg) scale(0.95);
+}
+
+.f_awesome {
+    display: block;
+    float: right;
+    margin-right: 15px;
+    margin-top: -70px;
+    position: relative;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.container.light .f_awesome {
+    color: #141e30;
+}
+
+.container.dark .f_awesome {
+    color: #03e9f4;
+}
+
+.eyeOpen {
+    opacity: 1;
+}
+
+.container p {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.container a {
+    display: inline-block;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: .3s;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+}
+
+.container.dark a {
+    color: #03e9f4;
+}
+
+.container.light a {
+    color: #141e30;
+}
+
+.container a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {width: 95%;}
+
+    .container {padding: 15px;}
+}
